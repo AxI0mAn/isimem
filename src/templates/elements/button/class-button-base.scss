@@ -1,0 +1,33 @@
+// значения параметров свойств для ссылок из макета в файле:
+@import './../../../styles_base/base/vars.scss';
+
+
+// общие стили для всех эффектов и состояний class="button"
+%button-base {
+  display: block; // чтоб ссылка сталa блочным элементом
+  width: $button-width;
+  height: $button-height;
+
+  border: $button-border;
+  @include bordeR($button-border-radius);
+
+  background-color: $button-bgc-start;
+
+  @include transit(.5s);
+
+  cursor: pointer;
+  position: relative;
+
+  :first-child {
+    @include сentering-xy();
+    color: $button-color-start;
+    font-family: $button-fontFamily;
+    font-size: $button-fontSize;
+    letter-spacing: $button-letterSpasing;
+
+    white-space: nowrap; //запретить переносить слова
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+}

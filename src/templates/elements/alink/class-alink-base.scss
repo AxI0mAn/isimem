@@ -1,0 +1,32 @@
+// значения параметров свойств для ссылок из макета в файле:
+@import './../../../styles_base/base/vars.scss';
+
+// общие стили для всех эффектов и состояний ссылок
+%alink-base {
+  font-family: $a-fontFamily;
+  font-size: $a-fontSize;
+  letter-spacing: $a-letterSpasing;
+
+  white-space: nowrap; //запретить переносить слова
+  text-transform: uppercase;
+  text-align: center;
+
+  margin: $a-margin;
+  @include transit(.5s);
+
+  // для include SVG - .alink__icon - ЗАДАЕТСЯ ДЛЯ тега <svg>
+  // .alink__icon 
+  :first-child {
+    vertical-align: middle; // центрирование по вертикали шаг1
+    margin-bottom: 5px; // центрирование по вертикали шаг2
+    height: $a-fontSize;
+    width: auto;
+
+    stroke: $a-link;
+    @include transit(.5s);
+  }
+
+  // .alink__text {}
+  :last-child {}
+
+}

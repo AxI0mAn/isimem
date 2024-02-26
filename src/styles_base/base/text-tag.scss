@@ -1,0 +1,78 @@
+// тексты
+
+.h1 {
+  font-family: 'Roboto', sans-serif;
+  color: $bgr_card_blue;
+  @include font_adapt(126, 30);
+  line-height: func_respons(132, 26);
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+.h2 {
+  font-family: 'Roboto', sans-serif;
+  color: $T_color;
+  @include font_adapt(74, 28);
+  line-height: func_respons(88, 26);
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+.h3 {
+  font-family: 'Roboto', sans-serif;
+  color: $T_color;
+  @include font_adapt(75, 26);
+  line-height: func_respons(88, 24);
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+.h4 {
+  font-family: 'Roboto', sans-serif;
+  color: $T_color;
+  @include font_adapt(53, 24);
+  line-height: func_respons(64, 22);
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+.h5 {
+  font-family: 'Roboto', sans-serif;
+  color: $T_color;
+  @include font_adapt(44, 22);
+  line-height: func_respons(52, 24);
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+.h6 {
+  font-family: 'Roboto', sans-serif;
+  color: $T_color;
+  @include font_adapt(16, 14);
+  line-height: func_respons(52, 20);
+  font-weight: normal;
+  letter-spacing: func_rem(1.28);
+  text-transform: uppercase;
+}
+
+.text {
+  font-family: 'Roboto', sans-serif;
+  color: $T_color;
+  @include font_adapt(16, 12);
+  line-height: func_rem(19.52);
+  font-weight: normal;
+  letter-spacing: normal;
+
+  &__accent {
+    color: $T_accent;
+  }
+
+  &__training {}
+
+  &__salary {}
+}
+
+.button,
+.alink {
+  /* styling in ./styles_base/base/button_and_alink.scss */
+}

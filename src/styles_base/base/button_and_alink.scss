@@ -1,0 +1,190 @@
+// стили для логотипа
+
+.alink-logotype {
+
+  svg {
+    width: func_respons(222, 50);
+    height: auto;
+
+    path {
+      @include transit(.5s);
+      stroke: $T_color;
+      fill: $T_color;
+    }
+  }
+
+  &:hover {
+    svg path {
+      @include transit(.5s);
+      stroke: $T_color;
+      stroke-width: 1px;
+      fill: $T_accent;
+    }
+  }
+}
+
+// стили ссылок nav
+.alink-nav {
+  @include transit(2.5s);
+  color: $T_color;
+  text-transform: uppercase;
+  position: relative;
+
+  &::before {
+    @include transit(.75s);
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: $T_color;
+  }
+
+  &::after {
+    @include transit(.75s);
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 0%;
+    height: 2px;
+    background-color: $T_color;
+  }
+
+  &:hover {
+    @include transit(1s);
+    color: $T_accent;
+    -webkit-text-stroke: .5px $T_color;
+
+    &::before {
+      @include transit(1s);
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $T_color;
+    }
+
+    &::after {
+      @include transit(1s);
+      position: absolute;
+      bottom: -2px;
+      right: 0;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: $T_color;
+    }
+  }
+
+  &:active {
+    background-color: $bgr_card_blue;
+    @include transit(.05s);
+    filter: blur(25px);
+    -webkit-filter: blur(25px);
+  }
+}
+
+//  стили кнопки бургера для мобильного меню
+.button-icon-burgerAnim {
+
+  --color: #fff;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+  -webkit-appearence: none;
+  -webkit-tap-highlight-color: transparent;
+
+  svg {
+    width: 64px;
+    height: 48px;
+    top: -6px;
+    left: -14px;
+    stroke: var(--color);
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    display: block;
+    position: absolute;
+
+    path {
+      transition: stroke-dasharray var(--duration, .85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, .85s) var(--easing, ease) var(--delay, 0s);
+      stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+      stroke-dashoffset: var(--offset, 126px);
+      transform: translateZ(0);
+      stroke: $T_color;
+
+      &:nth-child(2) {
+        --duration: .7s;
+        --easing: ease-in;
+        --offset: 100px;
+        --array-2: 74px;
+      }
+
+      &:nth-child(3) {
+        --offset: 133px;
+        --array-2: 107px;
+      }
+    }
+  }
+
+  &:hover {
+    svg>path {
+      stroke: $T_accent;
+    }
+  }
+
+  &.active {
+    svg {
+      path {
+
+        stroke: $T_accent;
+        --offset: 57px;
+
+        &:nth-child(1),
+        &:nth-child(3) {
+          --delay: .15s;
+          --easing: cubic-bezier(.2, .4, .2, 1.1);
+        }
+
+        &:nth-child(2) {
+          --duration: .4s;
+          --offset: 2px;
+          --array-1: 1px;
+        }
+
+        &:nth-child(3) {
+          --offset: 58px;
+        }
+      }
+    }
+  }
+}
+
+// стили для кнопок и ссылок в форме кнопки
+.button {
+  padding: 13px;
+  border: 1px solid $T_color;
+  @include bordeR(10px);
+
+  &__title {
+    font-family: 'Roboto', sans-serif;
+    color: $T_color;
+    @include font_adapt(14, 12);
+    line-height: normal;
+    font-weight: normal;
+    letter-spacing: func_rem(1.12);
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+}

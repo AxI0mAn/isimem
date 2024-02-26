@@ -1,0 +1,27 @@
+{% set params = [
+  {
+    class: 'new__img',
+    name: 'src',
+    folder: 'alt'
+  }
+] %}
+
+{%- macro pack(params) -%}
+  <picture class="{{params.class}}">
+    <source srcset="{{params.folder}}{{params.name}}.webp" type="image/webp">
+    <source srcset="{{params.folder}}{{params.name}}.png" type="image/jpeg" >
+    <img src="{{params.folder}}{{params.name}}.png" alt="image {{params.name}}" title="foto {{params.name}}" loading="lazy"/>
+  </picture>
+{%- endmacro -%}
+
+{# USE
+
+{% set img1 = {
+  class: 'hero__img--item',
+  name: 'hero',
+  folder: './../../src/assets/content/pages/index/'
+}%}
+  {%- import "./macros/_macros_image.njk" as makePicture -%}
+  {{ makePicture.pack(img1) }}
+ 
+#}

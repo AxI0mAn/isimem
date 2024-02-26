@@ -1,0 +1,38 @@
+{% block header %}
+  <header class="header container">
+
+    {# блок логотипа фото + название #}
+    <div class="header__logo">
+      <a class="header__logo--link  alink-logotype" href="#" title="Logotype-link">
+        {% include "/Users/imac/Desktop/axio/portfolio24/isimemen/src/templates/svg_inline/logotype.svg" %}
+        {# <span class="header__logo--text ">axi0man</span> #}
+      </a>
+    </div>
+
+    {# кнопка вызова навигации для экранов менее $tab #}
+    <button class="nav__burgerAnim button-icon-burgerAnim"  title="mobile navigation">
+      {% include "./../elements/button-icon/class-button-icon-burgerAnim.njk" %}
+    </button>
+
+    <nav class="nav">
+      <ul class="nav__block">
+        <li class="nav__item">
+          <a href="#" class="nav__link alink-nav">home</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link alink-nav">about</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link alink-nav">work with us</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link alink-nav">client wins</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link alink-nav">employers</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+{% endblock %}

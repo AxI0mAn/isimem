@@ -1,0 +1,206 @@
+{% set title = 'Home' %}
+{# title страницы #}
+
+{% include "_head.njk" %}
+
+<body>
+  <div class="wrapper__{{ title }} wrapper">
+
+    {% include "./../templates/partials/_header.njk" %}
+
+    <main class="main__{{ title }} main">
+      <section class="hero">
+        <div class="hero__img">
+          {% set img1 = {
+          class: 'hero__img--item',
+          name: 'hero',
+          folder: './../../src/assets/content/pages/index/'
+        }%}
+          {%- import "./macros/_macros_image.njk" as makePicture -%}
+          {{ makePicture.pack(img1) }}
+        </div>
+        <div class="hero__message">
+          <h1 class="h1 hero__message--h1">Welcome to <br> you reset</h1>
+        </div>
+      </section>
+      <section class="welcome container">
+        <div class="welcome__message">
+          <h5 class="h5 welcome__message--h5">We are a career development &#38; business consultancy for women of color eager to elevate themselves, uncover their life&#8217;s purpose, multiply their income, and experience fulfilled lives.</h5>
+        </div>
+        <a href="#" onclick="event.preventDefault()"  class="button button-welcome">
+          <span class="button__title">Discover More</span>
+        </a>
+      </section>
+      <section class="mission">
+        <div class="mission__message">
+          <h2 class="h2 mission__message--h2">We provide purpose-building programs that blend faith, self, and wealth.</h2>
+        </div>
+      </section>
+      <section class="programs container">
+        <div class="programs__header">
+          <h6 class="h6 programs__message--h6">our programs</h6>
+        </div>
+        <div class="programs__cards">
+          <div class="card__individuals card">
+            <div class="card__img">
+              {% set img1 = {
+                class: 'programs__img--item',
+                name: 'programs_ind',
+                folder: './../../src/assets/content/pages/index/'
+              }%}
+              {%- import "./macros/_macros_image.njk" as makePicture -%}
+              {{ makePicture.pack(img1) }}
+            </div>
+            <h6 class="h6 card__h6">Individuals</h6>
+            <p class="card__text text">Undervalued and underpaid? Let&#8217;s change that. Our career-development program, Fulfilled, is here to provide you with the resources and tools you need to not only go for a higher-paying job, but secure it. We believe it&#8217;s already yours.</p>
+            <a href="#" onclick="event.preventDefault()"  class="button card__button--programs">
+              <span class="button__title">Reimagine Now</span>
+            </a>
+          </div>
+          <div class="card__employers card">
+            <div class="card__img">
+              {% set img1 = {
+                class: 'programs__img--item',
+                name: 'programs_emp',
+                folder: './../../src/assets/content/pages/index/'
+              }%}
+              {%- import "./macros/_macros_image.njk" as makePicture -%}
+              {{ makePicture.pack(img1) }}
+            </div>
+            <h6 class="h6 card__h6">Employers</h6>
+            <p class="card__text text">Through our Fulfilled Work Framework, we advise employers on how to better position employees of color to unlock their potential and take ownership of their careers while increasing retention rates all around.</p>
+            <a href="#" onclick="event.preventDefault()"  class="button card__button--programs">
+              <span class="button__title">Learn More</span>
+            </a>
+          </div>
+          <div class="card__leaders card">
+            <div class="card__img">
+              {% set img1 = {
+                class: 'programs__img--item',
+                name: 'programs_lea',
+                folder: './../../src/assets/content/pages/index/'
+              }%}
+              {%- import "./macros/_macros_image.njk" as makePicture -%}
+              {{ makePicture.pack(img1) }}
+            </div>
+            <h6 class="h6 card__h6">Leaders</h6>
+            <p class="card__text text">We coach leaders, business owners, and influencers on how to maximize their value, unleash their power, and grow their success. From where we&#8217;re looking, there&#8217;s no glass ceiling.</p>
+            <a href="#" onclick="event.preventDefault()"  class="button card__button--programs">
+              <span class="button__title">Explore More</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="motivation container">
+        <div class="motivation__img">
+          <div class="motivation__img--block">
+            {% set img1 = {
+                class: 'motivation__img--shadow2',
+                name: 'motivationShadow2',
+                folder: './../../src/assets/content/pages/index/'
+              }%}
+            {%- import "./macros/_macros_image.njk" as makePicture -%}
+            {{ makePicture.pack(img1) }}
+            {% set img1 = {
+                class: 'motivation__img--shadow_off2',
+                name: 'motivation',
+                folder: './../../src/assets/content/pages/index/'
+              }%}
+            {%- import "./macros/_macros_image.njk" as makePicture -%}
+            {{ makePicture.pack(img1) }}
+          </div>
+        </div>
+        <div class="motivation__message">
+          <h5 class="h5 motivation__message--h5">We&#8217;re here to help you turn every “no” you&#8217;ve ever heard into a "0" on your paycheck.</h5>
+        </div>
+      </section>
+      <section class="currents container">
+        <div class="currents__header">
+          <h6 class="h6 currents__message--h6">The numbers say it all</h6>
+        </div>
+        <div class="currents__block">
+          <div class="currents__item">
+            <p class="currents__numbers">300+</p>
+            <p class="currents__caption">clients served</p>
+          </div>
+          <div class="currents__item">
+            <p class="currents__numbers">7k+</p>
+            <p class="currents__caption">women trained in career growth strategies</p>
+          </div>
+          <div class="currents__item ">
+            <p class="currents__numbers">$2mil+</p>
+            <p class="currents__caption">in salary increases during a pandemic</p>
+          </div>
+        </div>
+      </section>
+      <section class="section rss">
+        <div class="rss__block">
+          <span class="h3 rss__text1">  Your purpose is calling. It&#8217;s time to make a move. </span>
+          <span class="h3 rss__text2">  Your purpose is calling. It&#8217;s time to make a move.</span>
+        </div>
+      </section>
+      <section class="resources container">
+        <div class="resources__header">
+          <h6 class="h6 resources__message--h6">Free resources to level up your career</h6>
+        </div>
+        <div class="swiper-resources">
+          <div class="resources__cards swiper-wrapper">
+            <div class="card-res__quiz card-res swiper-slide">
+              <h4 class="h4 card-res__h4">quiz</h6>
+              <p class="card-res__text text">Feeling stuck, frustrated, and overworked in your current role? Like something is missing or not quite right? Take our quiz to uncover the roadblocks and get on the right track.</p>
+              <a href="#" onclick="event.preventDefault()"  class="button card-res__button card-res__button--quize">
+                <span class="button__title">Take the Quiz</span>
+              </a>
+            </div>
+            <div class="card-res__training card-res swiper-slide">
+              <h4 class="h4 card-res__h4">training</h6>
+              <p class="card-res__text text">Take a look at the exact framework our clients have used to increase their salary by $100K, land multiple dream job offers, and exceed lifestyle possibilities.</p>
+              <a href="#" onclick="event.preventDefault()"  class="button card-res__button card-res__button--training">
+                <span class="button__title">Watch Now</span>
+              </a>
+            </div>
+            <div class="card-res__course card-res swiper-slide">
+              <h4 class="h4 card-res__h4">Salary Course</h6>
+              <p class="card-res__text text">Learn the exact, step-by-step salary negotiation strategies that my clients use to increase their salaries by $50K - $100K</p>
+              <a href="#" onclick="event.preventDefault()"  class="button card-res__button card-res__button--course">
+                <span class="button__title">Watch Now</span>
+              </a>
+            </div>
+            <div class="card-res__books card-res swiper-slide">
+              <h4 class="h4 card-res__h4">books</h6>
+              <p class="card-res__text text">Learn the exact, step-by-step salary negotiation strategies.</p>
+              <a href="#" onclick="event.preventDefault()"  class="button card-res__button card-res__button--books">
+                <span class="button__title">read Now</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="testimonials">
+        <div class="testimonials__header">
+          <h6 class="h6 testimonials__message--h6">Don&#8217;t take our word for it.</h6>
+        </div>
+        <div class="swiper-testimonials">
+          <div class="testimonials__cards swiper-wrapper">
+            <div class="testimonials_card swiper-slide">
+              <h5 class="h5 testimonials__message--h5">"I just received an offer for a dream job with a significant pay increase at a great company—in the middle of a global pandemic!"</h5>
+              <span class="testimonials__subscribe">Bosola</span>
+            </div>
+            <div class="testimonials_card swiper-slide">
+              <h5 class="h5 testimonials__message--h5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo dolorum ratione cupiditate atque, unde ipsa quasi dicta minima eligendi suscipit soluta et hic alias nobis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, magnam!</h5>
+              <span class="testimonials__subscribe">Testing</span>
+            </div>
+            <div class="testimonials_card swiper-slide">
+              <h5 class="h5 testimonials__message--h5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis velit ex totam error autem repudiandae ipsum rerum numquam, illum commodi?</h5>
+              <span class="testimonials__subscribe">Testing</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {% include "./../templates/partials/_footer.njk" %}
+  </div>
+</body>
+
+</html>

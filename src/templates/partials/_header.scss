@@ -1,0 +1,93 @@
+@use 'sass:color';
+
+.header {
+
+  // ======================================== //
+  // стили для ПОЛОСЫ [размеры] [фон] [отступы] [flex or grid] [@media]
+  // ======================================== //
+  min-height: $header-min-height;
+  margin-bottom: $header-margin-bottom;
+  background-color: $header-bgr;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+
+  // ======================================== //
+  // стили для БЛОКА логотипа-ссылки
+  // ======================================== //
+  // &__logo {}
+
+  &__logo--link {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 14px auto;
+
+
+    @media (max-width: calc($tab + 0.01px)) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      grid-area: logotype;
+      align-self: center;
+    }
+  }
+}
+
+
+// ======================================== //
+// стили для для БЛОКА навигационных ссылок
+// ======================================== //
+// [фон] [отступы] [flex or grid] [@media]
+
+// скрыть навигацию для планшетов и мобильных
+.nav.moboff {
+  display: none;
+}
+
+.nav {
+  display: block;
+  margin: 39px 120px 28px auto;
+
+  @media (max-width: calc($tab + 0.01px)) {
+    position: absolute;
+    @include сentering-x();
+    margin: 0 auto;
+  }
+
+  &__block {
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: func_respons(40, 1);
+
+    @media (max-width: calc($tab + 0.01px)) {
+      padding: 5%;
+      flex-direction: column;
+      gap: 40;
+      background-color: rgba(255, 255, 255, .5); //$bgr_body;
+      min-width: 100vw;
+    }
+  }
+
+  &__item {}
+
+  &__link {}
+
+
+  &__burgerAnim {
+    z-index: $z-burgerAnim;
+    margin: auto 30px auto 5px;
+
+    @media (min-width: $tab) {
+      display: none;
+    }
+  }
+}
+
+
+//header - final
