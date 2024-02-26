@@ -1,3 +1,4 @@
+## update information upon completion of layout
 # about:
 
 ## finished practice work
