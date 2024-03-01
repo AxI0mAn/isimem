@@ -173,6 +173,7 @@
                 <span class="button__title">read Now</span>
               </a>
             </div>
+            <div class="swiper-slide"></div>
           </div>
         </div>
       </section>
@@ -182,20 +183,37 @@
         </div>
         <div class="swiper-testimonials">
           <div class="testimonials__cards swiper-wrapper">
-            <div class="testimonials_card swiper-slide">
+            <div class="testimonials__card swiper-slide">
               <h5 class="h5 testimonials__message--h5">"I just received an offer for a dream job with a significant pay increase at a great company—in the middle of a global pandemic!"</h5>
               <span class="testimonials__subscribe">Bosola</span>
             </div>
-            <div class="testimonials_card swiper-slide">
-              <h5 class="h5 testimonials__message--h5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo dolorum ratione cupiditate atque, unde ipsa quasi dicta minima eligendi suscipit soluta et hic alias nobis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, magnam!</h5>
+            <div class="testimonials__card swiper-slide">
+              <h5 class="h5 testimonials__message--h5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. nam!</h5>
               <span class="testimonials__subscribe">Testing</span>
             </div>
-            <div class="testimonials_card swiper-slide">
+            <div class="testimonials__card swiper-slide">
               <h5 class="h5 testimonials__message--h5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis velit ex totam error autem repudiandae ipsum rerum numquam, illum commodi?</h5>
               <span class="testimonials__subscribe">Testing</span>
             </div>
           </div>
+          <div class="testimonials__pagination"></div>
         </div>
+      </section>
+      <section class="photo">
+        {% set img1 = {
+            class: 'red_on_rock',
+            name: 'foto',
+            folder: './../../src/assets/content/pages/index/'
+          }%}
+        {%- import "./macros/_macros_image.njk" as makePicture -%}
+        {{ makePicture.pack(img1) }}
+      </section>
+      <section class="call_to_action container">
+        <h2 class="h2 call_to_action__header">Your transformation awaits.</h2>
+        <p class="call_to_action__mesaage">If you&#8217;re ready for change, then change is ready for you.</p>
+        <a href="#" onclick="event.preventDefault()"  class="call_to_action__button button">
+          <span class="button__title">I&#8217;m ready</span>
+        </a>
       </section>
     </main>
 

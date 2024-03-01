@@ -14,38 +14,41 @@
 * :root {}
 
 body {
-  // height: 100%;
   font-size: calc($rem*1px); // значение из макета - установлено в base/var.scss  - размер основного текста в 1rem
   background-color: $bgr_body; // значение из макета - установлено в base/var.scss 
   color: $T_color; // значение из макета - установлено в base/var.scss 
+
 }
 
 .wrapper {
   margin: 0 auto; // центрируем по горизонтали
-
   min-height: 100%; // чтоб footer не поднимался
   max-width: calc($maxWidth*1px); // значение из макета - установлено в base/var.scss 
-
+  width: 100%;
   display: flex; // чтоб footer не поднимался
   flex-flow: column nowrap; // чтоб footer не поднимался
 
+  @media (max-width: calc(374px + 0.01px)) {
+    margin-left: 10px;
+  }
 }
 
 .container {
   margin: 0 auto;
   align-self: center; // центрируем по горизонтали
   min-width: calc($minWidth*1px); // значение из макета - установлено в base/var.scss 
-  width: 98%; // сжимается при уменьшении экрана 
+  width: 100%; // сжимается при уменьшении экрана 
   max-width: calc(($maxWidthContainer*1px) + 30px); // значение из макета - установлено в base/var.scss 
-
-  padding-left: 15px; // отступ от края экрана
-  padding-right: 15px; // отступ от края экрана
-
+  padding-left: 15px;
+  padding-left: 15px;
   overflow: hidden;
 
-  @media (max-width: calc($tab + 0.01px)) {}
 }
 
 .main {
   flex: 1 1 auto; // чтоб footer не поднимался
+}
+
+section {
+  min-width: 100%;
 }

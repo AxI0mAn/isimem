@@ -10,7 +10,6 @@
 
 .main {
   background-color: #fff;
-
 }
 
 img {
@@ -80,7 +79,7 @@ img {
   &__cards {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: func_respons(40, 4);
 
@@ -131,12 +130,16 @@ img {
 
 .motivation {
   margin: func_prop(120) auto;
-  // min-height: 570px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-template-rows: 1fr;
   gap: 20px;
+  min-height: fit-content;
+
+  @media (max-width: calc(870px + 0.01px)) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, minmax(300px, 1fr));
+  }
 
   &__img {
     display: block;
@@ -144,6 +147,7 @@ img {
     height: func_respons(570, 300);
     max-width: 570px;
     max-height: 570px;
+    justify-self: center;
   }
 
   &__img--block {
@@ -176,11 +180,10 @@ img {
 
   &__message {
     display: block;
-    width: func_respons(570, 300);
-    height: func_respons(570, 300);
-    max-width: 570px;
-    max-height: 570px;
-    // padding: 153px 111px 153px 88px;
+    // width: func_respons(550, 300);
+    // height: func_respons(550, 300);
+    max-width: 500px;
+    max-height: 500px;
     border: 0px solid $bgr_sect_beig;
     background-color: $bgr_sect_beig;
     @include bordeR(20px);
@@ -247,6 +250,7 @@ img {
 
   &__caption {
     max-width: 180px;
+    padding: 10px;
   }
 }
 
@@ -333,6 +337,11 @@ img {
   .card-res,
   .swiper-slide {
     width: func_prop(360);
+
+    @media (max-width: calc($tab + 0.01px)) {
+      max-width: 300px;
+    }
+
     min-height: 100%;
 
     @include bordeR(10px);
@@ -412,6 +421,97 @@ img {
 }
 
 .testimonials {
+  position: relative;
   overflow: hidden;
+  text-align: center;
+  background-color: $bgr_sect_beig;
+  padding-top: 60px;
+  padding-bottom: 65px;
+  min-height: func_perc(1080, 525);
 
+  &__header {
+    margin-bottom: 60px;
+  }
+
+  &__message--h6 {}
+
+  &__cards {}
+
+  &__card {
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  &__message--h5 {
+    width: func_perc(1280, 671);
+    padding: auto 5px;
+    align-self: center;
+    margin-bottom: 16px;
+
+    @media (max-width: calc($desc + 0.01px)) {
+      width: 80vw;
+      @include transit(2s);
+    }
+
+    @media (max-width: calc($tab + 0.01px)) {
+      width: 90vw;
+      @include transit(2s);
+    }
+  }
+
+  &__subscribe {
+    text-transform: uppercase;
+    font-family: "Roboto", serif;
+    margin-bottom: 61px;
+  }
+
+  &__pagination {
+    position: absolute;
+    left: 100%;
+    margin-bottom: 65px;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  border: 2px solid $T_color;
+  vertical-align: middle;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $T_color;
+  width: 6px;
+  height: 6px;
+}
+
+.photo>img {
+  width: 100%;
+  height: auto;
+}
+
+.call_to_action {
+  text-align: center;
+  padding: 120px 190px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  &__header {
+    max-height: 714px;
+    min-width: 300px;
+  }
+
+  &__mesaage {
+    min-width: 300px;
+    margin-top: 35px;
+    margin-bottom: 45px;
+  }
+
+  &__button {
+    background-color: transparent;
+    border: 1px solid $T_color;
+  }
 }

@@ -50,6 +50,7 @@
 .nav {
   display: block;
   margin: 39px 120px 28px auto;
+  z-index: 10;
 
   @media (max-width: calc($tab + 0.01px)) {
     position: absolute;
