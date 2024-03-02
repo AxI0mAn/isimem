@@ -174,7 +174,7 @@
 
 // стили для кнопок и ссылок в форме кнопки
 .button {
-  padding: 13px;
+  padding: clamp(1rem, 13px, 5px);
   border: 1px solid $T_color;
   @include bordeR(10px);
 
