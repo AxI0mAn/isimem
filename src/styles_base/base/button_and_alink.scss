@@ -190,12 +190,25 @@
     @include transit(.7s);
   }
 
-  &:hover {
-    @include bordeR(1px);
-    @include transit(.5s);
-    border-top: 3px solid $T_color;
-    border-right: 0px solid $T_color;
-    border-bottom: 3px solid $T_color;
-    border-left: 0px solid $T_color;
+  @media(hover:hover) {
+    .button:hover {
+      @include bordeR(1px);
+      @include transit(.5s);
+      border-top: 3px solid $T_color;
+      border-right: 0px solid $T_color;
+      border-bottom: 3px solid $T_color;
+      border-left: 0px solid $T_color;
+    }
+  }
+
+  @media(hover:none) {
+    .button:active {
+      @include bordeR(1px);
+      @include transit(.5s);
+      border-top: 3px solid $T_color;
+      border-right: 0px solid $T_color;
+      border-bottom: 3px solid $T_color;
+      border-left: 0px solid $T_color;
+    }
   }
 }
