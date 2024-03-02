@@ -189,24 +189,6 @@
     text-transform: uppercase;
     @include transit(.7s);
   }
-
-  // &:hover {
-  //   @include bordeR(1px);
-  //   @include transit(.1s);
-  //   border-top: 3px solid $T_color;
-  //   border-right: 0px solid $T_color;
-  //   border-bottom: 3px solid $T_color;
-  //   border-left: 0px solid $T_color;
-  // }
-
-  // &:active {
-  //   @include bordeR(1px);
-  //   @include transit(.1s);
-  //   border-top: 0px solid $T_color;
-  //   border-right: 3px solid $T_color;
-  //   border-bottom: 0px solid $T_color;
-  //   border-left: 3px solid $T_color;
-  // }
 }
 
 @media (any-hover: hover) {
@@ -232,11 +214,28 @@
 @media (any-hover: none) {
 
   .button:active {
+    animation: btn_tach 1s ease 0s 1 normal forwards;
+    -webkit-animation: btn_tach 1s ease 0s 1 normal forwards;
+  }
+}
+
+@keyframes btn_tach {
+  0% {
+    border: 1px solid $T_color;
+    @include bordeR(10px);
+  }
+
+  50% {
     @include bordeR(1px);
     @include transit(.1s);
     border-top: 0px solid $T_color;
     border-right: 3px solid $T_color;
     border-bottom: 0px solid $T_color;
     border-left: 3px solid $T_color;
+  }
+
+  100% {
+    border: 1px solid $T_color;
+    @include bordeR(10px);
   }
 }
