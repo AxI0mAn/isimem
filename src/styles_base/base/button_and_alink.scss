@@ -187,5 +187,15 @@
     letter-spacing: func_rem(1.12);
     white-space: nowrap;
     text-transform: uppercase;
+    @include transit(.7s);
+  }
+
+  &:hover {
+    @include bordeR(1px);
+    @include transit(.5s);
+    border-top: 3px solid $T_color;
+    border-right: 0px solid $T_color;
+    border-bottom: 3px solid $T_color;
+    border-left: 0px solid $T_color;
   }
 }

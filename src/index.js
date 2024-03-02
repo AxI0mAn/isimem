@@ -16,6 +16,22 @@ class_button_icon_burgerAnim();
 import navMob from './scripts_base/navMob'
 navMob('.nav__burgerAnim', '.nav');
 
+import opacityScreen from './scripts_base/opacityScreen';
+opacityScreen();
+
+import scrollStartAction from './scripts_base/scrollStartAction';
+scrollStartAction('.motivation__message');
+scrollStartAction('.motivation__img--shadow2');
+
+scrollStartAction('.card-res__quiz');
+scrollStartAction('.card-res__training');
+scrollStartAction('.card-res__course');
+scrollStartAction('.card-res__books');
+
+scrollStartAction('.card__individuals');
+scrollStartAction('.card__employers');
+scrollStartAction('.card__leaders');
+
 
 new Swiper('.swiper-resources', {
   direction: 'horizontal',

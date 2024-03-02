@@ -19,7 +19,6 @@ export default function opacityScreen() {
   const vd = new IntersectionObserver(vdHandler, options);
 
   const cImgs = document.querySelectorAll('img');
-  // const notUse = document.querySelector('.hero__img1');
   cImgs.forEach((el) => {
     vd.observe(el);
 

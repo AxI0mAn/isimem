@@ -30,8 +30,15 @@ img {
     position: absolute;
     left: func_prop(60);
     bottom: func_prop(60);
+    opacity: 0;
+    animation: hero__message 5s ease 0s 1 normal forwards;
+    -webkit-animation: hero__message 5s ease 0s 1 normal forwards;
+  }
+}
 
-    &--h1 {}
+@keyframes hero__message {
+  100% {
+    opacity: 1;
   }
 }
 
@@ -94,6 +101,60 @@ img {
 
     .card:nth-child(2) {
       background-color: $bgr_sect_beig;
+    }
+
+    .card:first-child {
+      opacity: 0;
+      transform: translateX(300%);
+      -webkit-transform: translateX(300%);
+      -moz-transform: translateX(300%);
+      -ms-transform: translateX(300%);
+      -o-transform: translateX(300%);
+    }
+
+    .card:nth-child(2) {
+      opacity: 0;
+      transform: translateX(300%);
+      -webkit-transform: translateX(300%);
+      -moz-transform: translateX(300%);
+      -ms-transform: translateX(300%);
+      -o-transform: translateX(300%);
+    }
+
+    .card:last-child {
+      opacity: 0;
+      transform: translateX(300%);
+      -webkit-transform: translateX(300%);
+      -moz-transform: translateX(300%);
+      -ms-transform: translateX(300%);
+      -o-transform: translateX(300%);
+    }
+  }
+
+  .card:first-child.action {
+    animation: showCard 2s linear 0s 1 normal forwards;
+    -webkit-animation: showCard 2s linear 0s 1 normal forwards;
+
+  }
+
+  .card:nth-child(2).action {
+    animation: showCard 2s linear .25s 1 normal forwards;
+    -webkit-animation: showCard 2s linear .25s 1 normal forwards;
+  }
+
+  .card:last-child.action {
+    animation: showCard 2s linear .5s 1 normal forwards;
+    -webkit-animation: showCard 2s linear .5s 1 normal forwards;
+  }
+
+  @keyframes showCard {
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+      -webkit-transform: translateX(0%);
+      -moz-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+      -o-transform: translateX(0%);
     }
   }
 
@@ -167,6 +228,9 @@ img {
     -moz-transform: scaleX(0.1);
     -ms-transform: scaleX(0.1);
     -o-transform: scaleX(0.1);
+  }
+
+  &__img--shadow2.action {
     animation: move_shadow 3s ease 1s 1 normal forwards;
     -webkit-animation: move_shadow 3s ease 1s 1 normal forwards;
   }
@@ -189,6 +253,10 @@ img {
     @include bordeR(20px);
     opacity: 0;
     transform: scaleX(.1);
+
+  }
+
+  &__message.action {
     animation: move_shadow 3s ease 1s 1 normal forwards;
     -webkit-animation: move_shadow 3s ease 1s 1 normal forwards;
   }
@@ -370,10 +438,14 @@ img {
 
     &__quiz {
       background-color: $bgr_card_blue;
+      opacity: 0;
+      transform: scaleX(.1);
     }
 
     &__training {
       background-color: $bgr_sect_beig;
+      opacity: 0;
+      transform: scaleX(.1);
 
       .h4,
       .text,
@@ -388,6 +460,8 @@ img {
 
     &__course {
       background-color: $bgr_card_red;
+      opacity: 0;
+      transform: scaleX(.1);
 
       .h4,
       .text,
@@ -402,6 +476,8 @@ img {
 
     &__books {
       background-color: $bgr_sect_beig;
+      opacity: 0;
+      transform: scaleX(.1);
 
       .h4,
       .text,
@@ -416,6 +492,26 @@ img {
         filter: brightness(.5);
         -webkit-filter: brightness(.5);
       }
+    }
+
+    &__quiz.action {
+      animation: move_shadow 2s linear 0s 1 normal forwards;
+      -webkit-animation: move_shadow 2s linear 0s 1 normal forwards;
+    }
+
+    &__training.action {
+      animation: move_shadow 2s linear 0.5s 1 normal forwards;
+      -webkit-animation: move_shadow 2s ease 0.5s 1 normal forwards;
+    }
+
+    &__course.action {
+      animation: move_shadow 2s linear 1s 1 normal forwards;
+      -webkit-animation: move_shadow 3s ease 1s 1 normal forwards;
+    }
+
+    &__books.action {
+      animation: move_shadow 2s linear 1.5s 1 normal forwards;
+      -webkit-animation: move_shadow 2s linear 1.5s 1 normal forwards;
     }
   }
 }
