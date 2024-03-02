@@ -31,8 +31,8 @@ img {
     left: func_prop(60);
     bottom: func_prop(60);
     opacity: 0;
-    animation: hero__message 5s ease 0s 1 normal forwards;
-    -webkit-animation: hero__message 5s ease 0s 1 normal forwards;
+    animation: hero__message 5s ease -0.1s 1 normal forwards;
+    -webkit-animation: hero__message 5s ease -0.1s 1 normal forwards;
   }
 }
 
@@ -134,17 +134,33 @@ img {
   .card:first-child.action {
     animation: showCard 2s linear 0s 1 normal forwards;
     -webkit-animation: showCard 2s linear 0s 1 normal forwards;
-
   }
 
   .card:nth-child(2).action {
-    animation: showCard 2s linear .25s 1 normal forwards;
-    -webkit-animation: showCard 2s linear .25s 1 normal forwards;
+    animation: showCard 2s linear .5s 1 normal forwards;
+    -webkit-animation: showCard 2s linear .5s 1 normal forwards;
   }
 
   .card:last-child.action {
-    animation: showCard 2s linear .5s 1 normal forwards;
-    -webkit-animation: showCard 2s linear .5s 1 normal forwards;
+    animation: showCard 2s linear 1s 1 normal forwards;
+    -webkit-animation: showCard 2s linear 1s 1 normal forwards;
+  }
+
+  @media (max-width: calc($tab + 0.01px)) {
+    .card:first-child.action {
+      animation: showCard 2s linear -0.5s 1 normal forwards;
+      -webkit-animation: showCard 2s linear -0.5s 1 normal forwards;
+    }
+
+    .card:nth-child(2).action {
+      animation: showCard 2s linear -0.5s 1 normal forwards;
+      -webkit-animation: showCard 2s linear -0.5s 1 normal forwards;
+    }
+
+    .card:last-child.action {
+      animation: showCard 2s linear -0.5s 1 normal forwards;
+      -webkit-animation: showCard 2s linear -0.5s 1 normal forwards;
+    }
   }
 
   @keyframes showCard {
@@ -231,8 +247,8 @@ img {
   }
 
   &__img--shadow2.action {
-    animation: move_shadow 3s ease 1s 1 normal forwards;
-    -webkit-animation: move_shadow 3s ease 1s 1 normal forwards;
+    animation: move_shadow 3s ease 0s 1 normal forwards;
+    -webkit-animation: move_shadow 3s ease 0s 1 normal forwards;
   }
 
   &__img--shadow_off2 {
@@ -257,8 +273,8 @@ img {
   }
 
   &__message.action {
-    animation: move_shadow 3s ease 1s 1 normal forwards;
-    -webkit-animation: move_shadow 3s ease 1s 1 normal forwards;
+    animation: move_shadow 3s ease -0.5s 1 normal forwards;
+    -webkit-animation: move_shadow 3s ease -0.5s 1 normal forwards;
   }
 
   &__message--h5 {
@@ -494,23 +510,23 @@ img {
     }
 
     &__quiz.action {
-      animation: move_shadow 2s linear 0s 1 normal forwards;
-      -webkit-animation: move_shadow 2s linear 0s 1 normal forwards;
+      animation: move_shadow 2s linear -0.15s 1 normal forwards;
+      -webkit-animation: move_shadow 2s linear -0.15s 1 normal forwards;
     }
 
     &__training.action {
-      animation: move_shadow 2s linear 0.5s 1 normal forwards;
-      -webkit-animation: move_shadow 2s ease 0.5s 1 normal forwards;
+      animation: move_shadow 2s linear -0.15s 1 normal forwards;
+      -webkit-animation: move_shadow 2s linear -0.15s 1 normal forwards;
     }
 
     &__course.action {
-      animation: move_shadow 2s linear 1s 1 normal forwards;
-      -webkit-animation: move_shadow 3s ease 1s 1 normal forwards;
+      animation: move_shadow 2s linear -0.15s 1 normal forwards;
+      -webkit-animation: move_shadow 2s linear -0.15s 1 normal forwards;
     }
 
     &__books.action {
-      animation: move_shadow 2s linear 1.5s 1 normal forwards;
-      -webkit-animation: move_shadow 2s linear 1.5s 1 normal forwards;
+      animation: move_shadow 2s linear 0s 1 normal forwards;
+      -webkit-animation: move_shadow 2s linear 0s 1 normal forwards;
     }
   }
 }
