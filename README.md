@@ -3,22 +3,22 @@
 
 ## finished practice work
 
-- [hairdressing_salon](https://axi0man.github.io/SITE/)
+- [ISIMEMEN](https://axi0man.github.io/isimem/)
 
 ## makets
 
-- [original maket](<https://www.figma.com/MAKET ORIGINAL>)
+- [original maket](https://www.figma.com/file/kRaJTWtIGRXx3mvBxmhivi/Isimemen?type=design&mode=design&t=QIKsKYyRtjV1r8hj-0)
 
-- [from work](https://www.figma.com/MAKET IN WORK)
+- [from work](https://www.figma.com/file/0xzZnU9hsArkyIiK5MxN7g/isimemen?type=design&node-id=1-2&mode=design&t=azWPyaDFpSOAJL8f-0)
 
 ## category:
 
-- ### multi-page site
+- ### home page
 
 ## adaptive layout
 
-- min viewport - 320px
-- max viewport - 6160px
+- min viewport - 345px
+- max viewport - 1920px
 
 ## technology stack:
 
@@ -29,16 +29,16 @@
   - SCSS
     - grid and flex,
     - mixins,
-    - functions,
-    - drop menu.
+    - functions.
 - ### SVG
-- ### Map location
 - ### Webpack
   - - HtmlWebpackPlugin, FileManagerPlugin,
   - - optimization image, CSS, JS,
   - - Babel, Prettier
   - - and other packeges
 - ### SwiperJS
+- ### JS
+    - effects from scroll.
 - ### Git
   - GitLens
   - gh-pages
