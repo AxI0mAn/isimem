@@ -231,7 +231,6 @@
 
 @media (any-hover: none) {
 
-  .button:hover,
   .button:active {
     @include bordeR(1px);
     @include transit(.1s);
