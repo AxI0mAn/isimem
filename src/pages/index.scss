@@ -415,7 +415,7 @@ img {
     @include bordeR(10px);
     border: 1px solid $bgr_body;
 
-    padding: 23px 26px 0px 26px;
+    padding: 23px 26px 26px 26px;
 
     display: flex;
     flex-flow: column nowrap;
@@ -433,7 +433,6 @@ img {
 
     &__button {
       align-self: flex-end;
-      margin-bottom: 26px;
     }
 
     &__quiz {
