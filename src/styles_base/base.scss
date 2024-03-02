@@ -28,9 +28,6 @@ body {
   display: flex; // чтоб footer не поднимался
   flex-flow: column nowrap; // чтоб footer не поднимался
 
-  @media (max-width: calc(374px + 0.01px)) {
-    margin-left: 10px;
-  }
 }
 
 .container {
