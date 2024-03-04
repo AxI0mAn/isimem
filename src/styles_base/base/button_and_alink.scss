@@ -185,6 +185,8 @@
   border: 1px solid $T_color;
   @include bordeR(10px);
 
+  @include transit(.25s);
+
   &__title {
     font-family: 'Roboto', sans-serif;
     color: $T_color;
@@ -194,7 +196,7 @@
     letter-spacing: func_rem(1.12);
     white-space: nowrap;
     text-transform: uppercase;
-    @include transit(.7s);
+    // @include transit(.7s);
   }
 }
 
@@ -202,49 +204,55 @@
 @media (any-hover: hover) {
   .button:hover {
     @include bordeR(1px);
-    @include transit(.1s);
-    border-top: 3px solid $T_color;
-    border-right: 0px solid $T_color;
-    border-bottom: 3px solid $T_color;
-    border-left: 0px solid $T_color;
+    @include transit(.25s);
+    border-top: 1px solid transparent;
+    border-right: 3px solid $T_color;
+    border-bottom: 1px solid transparent;
+    border-left: 3px solid $T_color;
   }
 
   .button:active {
     @include bordeR(1px);
-    @include transit(.1s);
-    border-top: 0px solid $T_color;
-    border-right: 3px solid $T_color;
-    border-bottom: 0px solid $T_color;
-    border-left: 3px solid $T_color;
+    @include transit(.25s);
+    border-top: 3px solid $T_color;
+    border-right: 1px solid transparent;
+    border-bottom: 3px solid $T_color;
+    border-left: 1px solid transparent;
   }
 }
 
 // стили для кнопок и ссылок в форме кнопки когда устройство НЕ поддерживает hover-эффект
-@media (any-hover: none) {
+@media (any-hover: none) and (any-pointer: none) {
 
   .button:active {
-    background-color: transparent;
+    background-color: $bgr_body;
+    @include bordeR(1px);
+    border-top: 3px solid $T_color;
+    border-right: 1px solid transparent;
+    border-bottom: 3px solid $T_color;
+    border-left: 1px solid transparent;
     animation: btn_tach 1s ease 0s 1 normal forwards;
     -webkit-animation: btn_tach 1s ease 0s 1 normal forwards;
   }
-}
 
-@keyframes btn_tach {
-  0% {
-    border: 1px solid $T_color;
-    @include bordeR(10px);
-  }
 
-  50% {
-    @include bordeR(1px);
-    border-top: 0px solid $T_color;
-    border-right: 3px solid $T_color;
-    border-bottom: 0px solid $T_color;
-    border-left: 3px solid $T_color;
-  }
+  @keyframes btn_tach {
+    0% {
+      border: 1px solid $T_color;
+      @include bordeR(10px);
+    }
 
-  100% {
-    border: 1px solid $T_color;
-    @include bordeR(10px);
+    50% {
+      @include bordeR(1px);
+      border-top: 3px solid $T_color;
+      border-right: 1px solid transparent;
+      border-bottom: 3px solid $T_color;
+      border-left: 1px solid transparent;
+    }
+
+    100% {
+      border: 1px solid $T_color;
+      @include bordeR(10px);
+    }
   }
 }
