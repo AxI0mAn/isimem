@@ -10,7 +10,7 @@
   background-color: $header-bgr;
   width: 100%;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-content: center;
 
@@ -19,20 +19,10 @@
   // ======================================== //
   // &__logo {}
 
-  &__logo--link {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    margin: 14px auto;
+  &__logo {
+    align-self: center;
+    margin: auto 20px;
 
-
-    @media (max-width: calc($tab + 0.01px)) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      grid-area: logotype;
-      align-self: center;
-    }
   }
 }
 
@@ -50,6 +40,7 @@
 .nav {
   display: block;
   margin: 39px 120px 28px auto;
+  margin-right: func_respons(120, 1);
   z-index: 10;
 
   @media (max-width: calc($tab + 0.01px)) {
@@ -69,15 +60,36 @@
     @media (max-width: calc($tab + 0.01px)) {
       padding: 5%;
       flex-direction: column;
-      gap: 40;
-      background-color: rgba(255, 255, 255, .5); //$bgr_body;
+      gap: 0;
+      background-color: rgba(255, 255, 255, .85); //$bgr_body;
       min-width: 100vw;
     }
   }
 
-  &__item {}
+  &__item {
+    @media (max-width: calc($tab + 0.01px)) {
+      display: block;
+      width: 50%;
+      text-align: center;
+      min-height: fit-content;
+    }
+  }
 
-  &__link {}
+  &__link {
+    @media (max-width: calc($tab + 0.01px)) {
+      display: block;
+      height: 100%;
+      width: 100%;
+
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      &:hover {
+        background-color: $bgr_body;
+        box-shadow: 4px 4px 8px 8px $bgr_card_blue;
+      }
+    }
+  }
 
 
   &__burgerAnim {

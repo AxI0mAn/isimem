@@ -1,6 +1,7 @@
 // стили для логотипа
 
 .alink-logotype {
+  @include transit(.85s);
 
   svg {
     width: func_respons(222, 50);
@@ -20,6 +21,12 @@
       stroke-width: 1px;
       fill: $T_accent;
     }
+  }
+
+  &:active {
+    @include transit(.05s);
+    filter: blur(25px);
+    -webkit-filter: blur(25px);
   }
 }
 
